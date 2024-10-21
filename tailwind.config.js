@@ -1,11 +1,11 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: "class", // Add this line
 
   content: [
-    "./src/app/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -24,7 +24,7 @@ const config: Config = {
         },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(-25px)" },
         },
         fadeIn: {
           "0%": { opacity: "0" },
@@ -40,4 +40,3 @@ const config: Config = {
   },
   plugins: [],
 };
-export default config;
